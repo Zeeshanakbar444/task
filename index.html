@@ -7,46 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task</title>
 </head>
+<link rel="stylesheet" href="./style.css">
 
 <body>
 
     <!-- <form onsubmit="data() ; return false"> -->
-        <label>
-            Name:
-        </label>
-        <input type="text" id="userName">
-        <label>
-            FatherName :
-        </label>
-        <input type="text" id="FatherName">
-        <label>
-            Roll NO:
-        </label>
-        <input type="number" id="Roll">
+    <label>
+        Name:
+    </label>
+    <input type="text" required class="inp" id="userName">
+    <br>
+    <label>
+        FatherName :
+    </label>
+    <input type="text" required class="inp" id="FatherName">
+    <br>
+    <label >
+        Roll No :
+    </label>
+    <input type="text" id="roll_no">
+    <br>
 
-
-    
-             <p>Please select your favorite genre: 
-             <br />
-             <input type="radio" name="Weak Day" id="rad" value="Weak Day" 
-             checked="checked" />
-            <label> Week Day</label=>
-            <input type="radio" name="device-width" value="Weakend"id="rad" /> 
+    <p>ENter your class Time
+        <br />
+        <input type="radio" name="Weak Day" id="rad" value="Weak Day" checked="checked" />
+        <label> Week Day</label=>
+            <input type="radio" name="device-width" value="Weakend" id="rad" />
             <label>WeekEnd</label>
-            
-            </p>
 
-                 <p>What device do you listen to music on?</p> 
- <select  name="devices" id="select">
- <option  value="Blockchain">Blockchain</option>
- <option  value="Web Development">Web Development</option>
- <option  value="Graphics Design">Graphics Design</option>
-        
-</select> 
-<br> 
-<button onclick="data()" type="submit">Submit</button>
-<h1 id="h1">fsf</h1>
-  
+    </p>
+    <br>
+
+    <p>Enter your Course name </p>
+    <select name="devices" id="select">
+        <option value="Blockchain">Blockchain</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Graphics Design">Graphics Design</option>
+
+    </select>
+    <br>
+    <button onclick="data()" type="submit">Submit</button>
+    <div class="main">
+        <div class="div">
+            <h1 id="one"></h1>
+            <h1 id="two"></h1>
+        </div>
+        <div class="div2">
+            <h1 id="three"></h1>
+            <h1 id="four"></h1>
+        </div>
+        <h1 id="five"></h1>
+    </div>
 
 
 

@@ -1,0 +1,25 @@
+
+.div{
+    display: flex;
+
+}
+.div h1{
+    margin: 20px;
+}
+.div2{
+    display: flex;
+
+}
+.div2 h1{
+    margin: 20px;
+}
+.inp{
+    margin: 10px;
+}
+.main{
+    background-color: aqua;
+    margin: 20px;
+    padding: 10px;
+    border: 2px dotted black;
+    width: 80%;
+}
