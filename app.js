@@ -22,7 +22,7 @@ window.data=function () {
     // five.innerHTML = `Subject : ${select}`
 
     var studentData = {
-        studentName: user,
+        sName: user,
         fatherName: Fname,
         RollNO: rollNumber,
         Day: day,
@@ -41,7 +41,7 @@ window.data=function () {
     getData = JSON.parse(getData)
     console.log(getData)
 
-     one.innerHTML = `Name : ${getData.studentName}`
+     one.innerHTML = `Name : ${getData.sName}`
     two.innerHTML = `Father Name : ${getData.fatherName}`
     three.innerHTML = `Roll No : ${getData.RollNO}`
     four.innerHTML = `Day : ${getData.Day}`
