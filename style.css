@@ -1,25 +1,37 @@
 
-.div{
-    display: flex;
-
-}
-.div h1{
-    margin: 20px;
-}
-.div2{
-    display: flex;
-
-}
-.div2 h1{
-    margin: 20px;
-}
 .inp{
     margin: 10px;
+    font-size: 15px;
 }
 .main{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     background-color: aqua;
     margin: 20px;
     padding: 10px;
     border: 2px dotted black;
-    width: 80%;
+    width: 30%;
+}
+.class-timings{
+    margin-top: 10px;
+}
+.sel{
+    margin-top: 15px;
+    font-size: 15px;
+}
+button{
+    margin: 10px;
+    margin-left: 40px;
+    color: white;
+    background-color: red;
+    width: 90px;
+   border: 4px dashed blue;
+    font-size: 15px;
+    padding: 10px;
+}
+label{
+    font-size: 20px;
 }
