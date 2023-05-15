@@ -43,11 +43,11 @@ function registerNewStudent() {
 
 var stdntDiv = document.querySelectorAll("#students-data")[0];
 function printStudentData(student) {
-    // printWithBacktick(student);
-    printWithDOMNodes(student)
+    printWithBacktick(student);
+    // printWithDOMNodes(student)
 }
 
-function printWithBacktick(student) {
+function printWithBacktick(student , indexELement ) {
 
     var data = `<div style=" margin: 15px; padding: 20px;     border-radius: 20px; width:200px; background-color: grey; color:white; font-size:20px; text-transform: capitalize; border:4px solid blue;">
         <h2> ${student.name}</h2>
@@ -55,7 +55,7 @@ function printWithBacktick(student) {
         <h2>${student.rollNumber}</h2>
         <h3>${student.classDays}</h3>
         <h3>${student.subject}</h3>
-    
+    <button onclick="del(this , ${indexELement} )">add</button>
     </div>`;
     stdntDiv.innerHTML += data;
 }
@@ -70,8 +70,8 @@ function getStudentsData() {
     }
     console.log(allStudentsData);
     for (var i = 0; i < allStudentsData.length; i++) {
-        // printWithBacktick(allStudentsData[i]);
-        printWithDOMNodes(allStudentsData[i]);
+        printWithBacktick(allStudentsData[i] ,i );
+        // printWithDOMNodes(allStudentsData[i]);
     }
 }
 getStudentsData();
@@ -102,15 +102,16 @@ function printWithDOMNodes(student) {
     var delBut = document.createElement('button');
     var delText = document.createTextNode('delete');
     delBut.appendChild(delText);
-    delBut.setAttribute('onclick', 'delButton(this)')
+    delBut.setAttribute('onclick', 'delButton(this }')
     div.appendChild(delBut)
 
 
 }
-function delButton(deleteELement) {
+function delButton(deleteELement ) {
 
 
-    stdntDiv.removeChild(deleteELement.parentNode)
+    stdntDiv.removeChild(deleteELement.parentNode);
+
 }
 
 function createElementNodes(elementName, textContent) {
@@ -118,4 +119,19 @@ function createElementNodes(elementName, textContent) {
     var elementText = document.createTextNode(textContent);
     element.appendChild(elementText);
     return element;
+}
+
+function del(delButton , indexELement ){
+console.log(delButton.parentNode);
+stdntDiv.removeChild(delButton.parentNode);
+console.log(indexELement ,allStudentsData);
+
+allStudentsData.splice(indexELement , 1);
+localStorage.setItem("studentsData", JSON.stringify(allStudentsData));
+
+
+stdntDiv.innerHTML = " ";
+allStudentsData = [];
+getStudentsData();
+
 }
